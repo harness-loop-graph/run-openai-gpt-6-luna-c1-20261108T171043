@@ -892,5 +892,19 @@
     },
     "passed": false
   },
-  "stopReason": "finished"
+  "stopReason": "finished",
+  "staticAnalysis": {
+    "sonarOrganization": "harness-loop-graph",
+    "sonarProjectKey": "harness-loop-graph_run-openai-gpt-6-luna-c1-20261108T171043",
+    "semgrepConfig": [
+      "p/default",
+      "p/typescript"
+    ],
+    "workflowSha256": "f26011d48e4fb546de0deb485bc16ddbe5671462c31bebc7ba7b01ffe0590e8d",
+    "removedWorkflows": []
+  },
+  "repository": {
+    "name": "harness-loop-graph/run-openai-gpt-6-luna-c1-20261108T171043",
+    "url": "https://github.com/harness-loop-graph/run-openai-gpt-6-luna-c1-20261108T171043"
+  }
 }
