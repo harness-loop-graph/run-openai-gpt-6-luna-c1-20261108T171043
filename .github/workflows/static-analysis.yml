@@ -1,0 +1,159 @@
+name: static-analysis
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  security-events: write
+  actions: read
+
+jobs:
+  semgrep:
+    runs-on: ubuntu-latest
+    container:
+      image: semgrep/semgrep
+    steps:
+      - uses: actions/checkout@v4
+      - name: Semgrep scan
+        run: semgrep scan --config p/default --config p/typescript --sarif --output semgrep.sarif || true
+      - name: Upload SARIF
+        if: always()
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: semgrep.sarif
+          category: semgrep
+
+  coverage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Coverage (backend)
+        continue-on-error: true
+        timeout-minutes: 20
+        env:
+          CI: true
+        run: |
+          if [ ! -f backend/package.json ]; then echo "no backend/package.json, skipping"; exit 0; fi
+          cd backend
+          if ! node -e "process.exit(require('./package.json').scripts?.test ? 0 : 1)"; then echo "no test script, skipping"; exit 0; fi
+          npm ci || npm install
+          if [ ! -f node_modules/vitest/package.json ]; then echo "vitest not installed, skipping coverage"; exit 0; fi
+          version=$(node -p "require('./node_modules/vitest/package.json').version")
+          npm i --no-save @vitest/coverage-v8@$version
+          npx vitest run --coverage --coverage.provider=v8 --coverage.reporter=lcov --coverage.reportsDirectory=coverage
+          if [ -f coverage/lcov.info ]; then sed -i '/^SF:[/]/!s#^SF:#SF:backend/#' coverage/lcov.info; fi
+      - name: Coverage (frontend)
+        continue-on-error: true
+        timeout-minutes: 20
+        env:
+          CI: true
+        run: |
+          if [ ! -f frontend/package.json ]; then echo "no frontend/package.json, skipping"; exit 0; fi
+          cd frontend
+          if ! node -e "process.exit(require('./package.json').scripts?.test ? 0 : 1)"; then echo "no test script, skipping"; exit 0; fi
+          npm ci || npm install
+          if [ ! -f node_modules/vitest/package.json ]; then echo "vitest not installed, skipping coverage"; exit 0; fi
+          version=$(node -p "require('./node_modules/vitest/package.json').version")
+          npm i --no-save @vitest/coverage-v8@$version
+          npx vitest run --coverage --coverage.provider=v8 --coverage.reporter=lcov --coverage.reportsDirectory=coverage
+          if [ -f coverage/lcov.info ]; then sed -i '/^SF:[/]/!s#^SF:#SF:frontend/#' coverage/lcov.info; fi
+      - name: Stage coverage reports
+        if: always()
+        run: |
+          for f in backend/coverage/lcov.info frontend/coverage/lcov.info; do
+            if [ -f "$f" ] && [ ! -L "$f" ]; then mkdir -p "coverage-artifacts/$(dirname "$f")" && cp "$f" "coverage-artifacts/$f"; fi
+          done
+      - name: Upload coverage reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-reports
+          path: coverage-artifacts
+          if-no-files-found: ignore
+
+  sonarcloud:
+    needs: coverage
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Download coverage reports
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: coverage-reports
+          path: .
+      - name: SonarCloud scan
+        uses: SonarSource/sonarqube-scan-action@v5
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: https://sonarcloud.io
+      - name: Wait for SonarCloud analysis
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        continue-on-error: true
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: |
+          report=.scannerwork/report-task.txt
+          if [ ! -f "$report" ]; then echo "no report-task.txt, not waiting"; exit 0; fi
+          # ceTaskUrl is the /api/ce/task?id=... URL of this analysis' compute task
+          url=$(sed -n 's/^ceTaskUrl=//p' "$report")
+          case "$url" in https://sonarcloud.io/*) ;; *) echo "unexpected ceTaskUrl, not waiting"; exit 0 ;; esac
+          for i in $(seq 1 30); do
+            status=$(curl -s -u "$SONAR_TOKEN:" "$url" | jq -r '.task.status // empty')
+            echo "attempt $i: $status"
+            case "$status" in SUCCESS|FAILED|CANCELED) break ;; esac
+            sleep 5
+          done
+          exit 0
+      - name: Quality criteria (informative)
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        continue-on-error: true
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          MIN_COVERAGE: 65
+          MAX_DEBT_MIN: 960
+          MAX_COMPLEXITY: 50
+          MAX_VULNERABILITIES: 0
+        run: |
+          PROJECT_KEY=$(sed -n 's/^sonar.projectKey=//p' sonar-project.properties)
+          api() { curl -s -u "$SONAR_TOKEN:" "$1"; }
+          measures=$(api "https://sonarcloud.io/api/measures/component?component=$PROJECT_KEY&branch=main&metricKeys=coverage,sqale_index")
+          metric() { echo "$measures" | jq -r --arg m "$1" '.component.measures[]? | select(.metric == $m) | .value'; }
+          coverage=$(metric coverage)
+          debt=$(metric sqale_index)
+          # The most complex file's complexity: the project sum puts any full app over the threshold.
+          complexity=$(api "https://sonarcloud.io/api/measures/component_tree?component=$PROJECT_KEY&branch=main&metricKeys=complexity&qualifiers=FIL&s=metric&metricSort=complexity&metricSortFilter=withMeasuresOnly&asc=false&ps=1" | jq -r '.components[0].measures[]? | select(.metric == "complexity") | .value')
+          vulns=$(api "https://sonarcloud.io/api/issues/search?componentKeys=$PROJECT_KEY&branch=main&types=VULNERABILITY&severities=CRITICAL,BLOCKER&resolved=false&ps=1" | jq -r '.total // empty')
+          failed=0
+          row() {
+            ok=$(awk -v v="$2" -v t="$4" -v op="$5" 'BEGIN { if (v == "") print 0; else if (op == "ge") print (v + 0 >= t + 0); else if (op == "le") print (v + 0 <= t + 0); else if (op == "lt") print (v + 0 < t + 0); else print (v + 0 == t + 0) }')
+            if [ "$ok" = "1" ]; then state="✅"; else state="❌"; failed=1; fi
+            value="$2$6"
+            if [ -z "$2" ]; then value="N/A"; fi
+            echo "| $1 | $value | $3 | $state |"
+          }
+          {
+            echo "### Resultado de calidad"
+            echo "| Criterio | Valor | Meta | Estado |"
+            echo "|---|---|---|---|"
+            row "Cobertura" "$coverage" "≥ $MIN_COVERAGE%" "$MIN_COVERAGE" ge "%"
+            row "Deuda técnica" "$debt" "≤ $MAX_DEBT_MIN min" "$MAX_DEBT_MIN" le " min"
+            row "Complejidad ciclomática (máx. por archivo)" "$complexity" "< $MAX_COMPLEXITY" "$MAX_COMPLEXITY" lt ""
+            row "Vulnerabilidades críticas" "$vulns" "$MAX_VULNERABILITIES" "$MAX_VULNERABILITIES" eq ""
+          } >> "$GITHUB_STEP_SUMMARY"
+          if [ "$failed" = "1" ]; then echo "::warning title=Quality gates::Algunos criterios no se cumplen. Revisa la tabla en Summary."; fi
+          exit 0
