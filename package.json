@@ -1,0 +1,1 @@
+{"name":"medapp","version":"1.0.0","private":true,"scripts":{"test:e2e":"playwright test","format":"prettier --write \"e2e/**/*.ts\" \"playwright.config.ts\"","format:check":"prettier --check \"e2e/**/*.ts\" \"playwright.config.ts\""},"devDependencies":{"@playwright/test":"1.49.1","prettier":"3.4.2","typescript":"5.7.2"}}

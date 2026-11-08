@@ -1,0 +1,225 @@
+{
+  "timestamp": "2026-11-08T17:46:53.455Z",
+  "batteries": [
+    {
+      "battery": "battery1-e2e",
+      "passed": false,
+      "checks": [
+        {
+          "name": "flows.spec.ts > login per role > login patient shows correct nav",
+          "passed": false,
+          "details": "[\"Error: \\u001b[2mexpect(\\u001b[22m\\u001b[31mlocator\\u001b[39m\\u001b[2m).\\u001b[22mtoBeVisible\\u001b[2m(\\u001b[22m\\u001b[2m)\\u001b[22m failed\\n\\nLocator: locator('[data-testid=\\\"nav-bookings\\\"]')\\nExpected: visible\\nTimeout: 5000ms\\nError: element(s) not found\\n\\nCall log:\\n\\u001b[2m  - Expect \\\"toBeVisible\\\" locator('[data-testid=\\\"nav-bookings\\\"]') with timeout 5000ms\\u001b[22m\\n\\u001b[2m  - waiting for locator('[data-testid=\\\"nav-bookings\\\"]')\\u001b[22m\\n\"]"
+        },
+        {
+          "name": "flows.spec.ts > login per role > login professional shows correct nav",
+          "passed": false,
+          "details": "[\"Error: \\u001b[2mexpect(\\u001b[22m\\u001b[31mlocator\\u001b[39m\\u001b[2m).\\u001b[22mtoBeVisible\\u001b[2m(\\u001b[22m\\u001b[2m)\\u001b[22m failed\\n\\nLocator: locator('[data-testid=\\\"nav-agenda\\\"]')\\nExpected: visible\\nTimeout: 5000ms\\nError: element(s) not found\\n\\nCall log:\\n\\u001b[2m  - Expect \\\"toBeVisible\\\" locator('[data-testid=\\\"nav-agenda\\\"]') with timeout 5000ms\\u001b[22m\\n\\u001b[2m  - waiting for locator('[data-testid=\\\"nav-agenda\\\"]')\\u001b[22m\\n\"]"
+        },
+        {
+          "name": "flows.spec.ts > login per role > login staff shows correct nav",
+          "passed": false,
+          "details": "[\"Error: \\u001b[2mexpect(\\u001b[22m\\u001b[31mlocator\\u001b[39m\\u001b[2m).\\u001b[22mtoBeVisible\\u001b[2m(\\u001b[22m\\u001b[2m)\\u001b[22m failed\\n\\nLocator: locator('[data-testid=\\\"nav-agenda\\\"]')\\nExpected: visible\\nTimeout: 5000ms\\nError: element(s) not found\\n\\nCall log:\\n\\u001b[2m  - Expect \\\"toBeVisible\\\" locator('[data-testid=\\\"nav-agenda\\\"]') with timeout 5000ms\\u001b[22m\\n\\u001b[2m  - waiting for locator('[data-testid=\\\"nav-agenda\\\"]')\\u001b[22m\\n\"]"
+        },
+        {
+          "name": "flows.spec.ts > login per role > login admin shows correct nav",
+          "passed": false,
+          "details": "[\"Error: \\u001b[2mexpect(\\u001b[22m\\u001b[31mlocator\\u001b[39m\\u001b[2m).\\u001b[22mtoBeVisible\\u001b[2m(\\u001b[22m\\u001b[2m)\\u001b[22m failed\\n\\nLocator: locator('[data-testid=\\\"nav-admin\\\"]')\\nExpected: visible\\nTimeout: 5000ms\\nError: element(s) not found\\n\\nCall log:\\n\\u001b[2m  - Expect \\\"toBeVisible\\\" locator('[data-testid=\\\"nav-admin\\\"]') with timeout 5000ms\\u001b[22m\\n\\u001b[2m  - waiting for locator('[data-testid=\\\"nav-admin\\\"]')\\u001b[22m\\n\"]"
+        },
+        {
+          "name": "flows.spec.ts > patient flow > search, book, assert appointment appears",
+          "passed": false,
+          "details": "[\"\\u001b[31mTest timeout of 150000ms exceeded.\\u001b[39m\"]"
+        },
+        {
+          "name": "flows.spec.ts > professional flow > record encounter",
+          "passed": false,
+          "details": "[\"\\u001b[31mTest timeout of 150000ms exceeded.\\u001b[39m\"]"
+        },
+        {
+          "name": "flows.spec.ts > patient history > history contains encounter",
+          "passed": false,
+          "details": "[\"\\u001b[31mTest timeout of 150000ms exceeded.\\u001b[39m\"]"
+        },
+        {
+          "name": "flows.spec.ts > patient cancel > cancel appointment removes it",
+          "passed": false,
+          "details": "[\"\\u001b[31mTest timeout of 150000ms exceeded.\\u001b[39m\"]"
+        }
+      ],
+      "summary": {
+        "total": 8,
+        "passed": 0,
+        "failed": 8
+      }
+    },
+    {
+      "battery": "battery2-schema",
+      "passed": true,
+      "checks": [
+        {
+          "name": "table-usuario",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "table-rol",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "table-paciente",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "table-profesional",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "table-disponibilidad",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "table-cita",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "table-encuentro",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "table-adjunto",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "table-auditoria",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "fk-cita-paciente_id",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "fk-cita-profesional_id",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "fk-encuentro-cita_id",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "fk-adjunto-encuentro_id",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "fk-auditoria-usuario_id",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "notnull-cita.paciente_id",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "notnull-cita.profesional_id",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "notnull-cita.franja_inicio",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "notnull-cita.estado",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "notnull-encuentro.version",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "partial-unique-cita-professional-slot",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "check-cita-estado",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "check-encuentro-version",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "index-cita-franja_inicio",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "index-cita-paciente_id",
+          "passed": true,
+          "details": ""
+        }
+      ],
+      "summary": {
+        "total": 24,
+        "passed": 24,
+        "failed": 0
+      }
+    },
+    {
+      "battery": "battery3-abuse",
+      "passed": false,
+      "checks": [
+        {
+          "name": "oauth-flow",
+          "passed": false,
+          "details": "token exchange failed: 201 {\"access_token\":\"abdfb6e6c58168ef58ef9077a7086119967bc1b2363a28edc7e9531d1f794609\",\"refresh_token\":\"bf6a1af6b582d7a0750872b5a444ef014b0c7ac62a689adc88023291f4c3fd71\"}"
+        }
+      ],
+      "summary": {
+        "total": 1,
+        "passed": 0,
+        "failed": 1
+      }
+    },
+    {
+      "battery": "battery4-coherence",
+      "passed": true,
+      "checks": [
+        {
+          "name": "unfulfilled-contracts",
+          "passed": true,
+          "details": "unresolved=1: GET ${base}${path} (frontend/src/api/client.ts:12)"
+        },
+        {
+          "name": "exposed-not-invoked",
+          "passed": true,
+          "details": "informational count=0"
+        }
+      ],
+      "summary": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0
+      }
+    }
+  ],
+  "passed": false
+}

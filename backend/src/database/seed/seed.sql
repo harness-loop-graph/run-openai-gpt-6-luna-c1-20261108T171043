@@ -1,0 +1,1 @@
+-- Seed statements are applied idempotently by the backend seed routine.

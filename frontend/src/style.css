@@ -1,0 +1,14 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #f4f7fb; color: #172b4d; font: 16px system-ui, sans-serif; }
+header, nav { display: flex; align-items: center; gap: 1rem; padding: 1rem 2rem; background: #fff; border-bottom: 1px solid #d9e2ef; }
+header h1 { margin: 0 auto 0 0; font-size: 1.35rem; }
+button { border: 0; border-radius: 6px; background: #1769aa; color: #fff; padding: .65rem 1rem; cursor: pointer; margin: .25rem; }
+button:hover { background: #0e4c83; }
+main { max-width: 960px; margin: 2rem auto; padding: 1rem; }
+section, .login { background: white; border-radius: 10px; padding: 1.5rem; box-shadow: 0 2px 12px #152b4d12; }
+.login { max-width: 440px; margin: 12vh auto; }
+label { display: block; margin: 1rem 0; }
+input, select, textarea { display: block; width: 100%; max-width: 480px; padding: .65rem; margin-top: .35rem; border: 1px solid #aebdce; border-radius: 5px; }
+article { background: #f7f9fc; padding: .8rem; margin: .6rem 0; border-radius: 5px; }
+.selected { outline: 3px solid #7ab8ed; }
+[data-testid="error-banner"] { background: #ffe4e4; color: #8b1818; padding: .8rem; border-radius: 5px; }

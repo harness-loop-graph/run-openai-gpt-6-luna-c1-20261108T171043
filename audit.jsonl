@@ -1,0 +1,143 @@
+{"decision":"allowed","reason":"Tool 'read_file' is allowed by policy","tool":"read_file","path":"SPEC.md","at":"2026-11-08T17:10:56.971Z"}
+{"decision":"allowed","reason":"Tool 'read_file' is allowed by policy","tool":"read_file","path":"SPEC.md","at":"2026-11-08T17:11:03.765Z"}
+{"decision":"allowed","reason":"Tool 'load_skill' is allowed by policy","tool":"load_skill","name":"nestjs-patterns","at":"2026-11-08T17:11:09.397Z"}
+{"decision":"allowed","reason":"Tool 'load_skill' is allowed by policy","tool":"load_skill","name":"react-patterns","at":"2026-11-08T17:11:13.148Z"}
+{"decision":"allowed","reason":"Command 'sed' is allowed by policy","tool":"run_command","command":"sed -n '1,140p' SPEC.md","at":"2026-11-08T17:11:15.934Z"}
+{"decision":"allowed","reason":"Command 'sed' is allowed by policy","tool":"run_command","command":"sed -n '140,280p' SPEC.md","at":"2026-11-08T17:11:22.477Z"}
+{"decision":"allowed","reason":"Tool 'load_skill' is allowed by policy","tool":"load_skill","name":"docker-patterns","at":"2026-11-08T17:11:31.668Z"}
+{"decision":"allowed","reason":"Command 'ls' is allowed by policy","tool":"run_command","command":"ls -la","at":"2026-11-08T17:11:40.712Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":"docker-compose.yml","at":"2026-11-08T17:11:56.978Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":".env.example","at":"2026-11-08T17:12:01.603Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":"backend/package.json","at":"2026-11-08T17:12:13.291Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":"backend/tsconfig.json","at":"2026-11-08T17:12:21.670Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":"backend/Dockerfile","at":"2026-11-08T17:12:30.306Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":"backend/src/database/migrations/001_schema.sql","at":"2026-11-08T17:12:52.323Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":"backend/src/database/migrations/001_schema.down.sql","at":"2026-11-08T17:12:57.556Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":"backend/src/database/seed/seed.sql","at":"2026-11-08T17:13:02.649Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":"backend/src/database/migrations/002_auth.sql","at":"2026-11-08T17:13:17.637Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":"backend/src/database/migrations/002_auth.down.sql","at":"2026-11-08T17:13:22.338Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":"backend/src/common/errors.filter.ts","at":"2026-11-08T17:13:35.926Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":"backend/src/app.module.ts","at":"2026-11-08T17:13:43.497Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":"backend/src/main.ts","at":"2026-11-08T17:13:51.117Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":"backend/src/api.service.ts","at":"2026-11-08T17:15:17.935Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":"backend/src/api.controller.ts","at":"2026-11-08T17:16:07.214Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":"frontend/package.json","at":"2026-11-08T17:16:17.580Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":"frontend/index.html","at":"2026-11-08T17:16:24.232Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":"frontend/tsconfig.json","at":"2026-11-08T17:16:33.947Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":"frontend/vite.config.ts","at":"2026-11-08T17:16:37.734Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":"frontend/Dockerfile","at":"2026-11-08T17:16:43.114Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":"frontend/nginx.conf","at":"2026-11-08T17:16:47.028Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":"frontend/src/api/client.ts","at":"2026-11-08T17:16:51.809Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":"frontend/src/auth/pkce.ts","at":"2026-11-08T17:16:56.011Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":"frontend/src/main.tsx","at":"2026-11-08T17:17:46.011Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/api.controller.ts","at":"2026-11-08T17:18:07.434Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":"frontend/src/style.css","at":"2026-11-08T17:18:18.210Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":"frontend/src/auth/tokenPolicy.ts","at":"2026-11-08T17:18:23.096Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":"root-package.json","at":"2026-11-08T17:18:24.747Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":"package.json","at":"2026-11-08T17:18:49.796Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":"playwright.config.ts","at":"2026-11-08T17:18:52.987Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":"backend/test/access.spec.ts","at":"2026-11-08T17:19:03.021Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":"backend/test/booking.spec.ts","at":"2026-11-08T17:19:07.828Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":"e2e/basic.spec.ts","at":"2026-11-08T17:19:10.464Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":"docs/architecture.md","at":"2026-11-08T17:19:22.768Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":"README.md","at":"2026-11-08T17:19:29.812Z"}
+{"decision":"allowed","reason":"Command 'cd' is allowed by policy","tool":"run_command","command":"cd backend && npm install","at":"2026-11-08T17:19:34.383Z"}
+{"decision":"allowed","reason":"Command 'cd' is allowed by policy","tool":"run_command","command":"cd backend && npm run build","at":"2026-11-08T17:19:48.992Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/api.controller.ts","at":"2026-11-08T17:20:00.583Z"}
+{"decision":"allowed","reason":"Command 'cd' is allowed by policy","tool":"run_command","command":"cd backend && npm run build","at":"2026-11-08T17:20:02.387Z"}
+{"decision":"allowed","reason":"Command 'cd' is allowed by policy","tool":"run_command","command":"cd frontend && npm install","at":"2026-11-08T17:20:04.597Z"}
+{"decision":"allowed","reason":"Command 'cd' is allowed by policy","tool":"run_command","command":"cd frontend && npm run build","at":"2026-11-08T17:20:09.904Z"}
+{"decision":"allowed","reason":"Command 'cd' is allowed by policy","tool":"run_command","command":"cd backend && npm test","at":"2026-11-08T17:20:12.574Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/api.service.ts","at":"2026-11-08T17:20:31.338Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/api.controller.ts","at":"2026-11-08T17:20:36.971Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/api.service.ts","at":"2026-11-08T17:20:48.675Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/api.controller.ts","at":"2026-11-08T17:20:51.972Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/api.controller.ts","at":"2026-11-08T17:21:12.271Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/main.ts","at":"2026-11-08T17:21:48.740Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/main.ts","at":"2026-11-08T17:21:51.437Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"frontend/src/main.tsx","at":"2026-11-08T17:21:54.329Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"frontend/src/main.tsx","at":"2026-11-08T17:21:58.068Z"}
+{"decision":"allowed","reason":"Command 'cd' is allowed by policy","tool":"run_command","command":"cd backend && npm run format","at":"2026-11-08T17:22:23.497Z"}
+{"decision":"allowed","reason":"Command 'cd' is allowed by policy","tool":"run_command","command":"cd frontend && npm run format","at":"2026-11-08T17:22:25.485Z"}
+{"decision":"allowed","reason":"Command 'npm' is allowed by policy","tool":"run_command","command":"npm install","at":"2026-11-08T17:22:28.183Z"}
+{"decision":"allowed","reason":"Command 'npm' is allowed by policy","tool":"run_command","command":"npm run format","at":"2026-11-08T17:22:34.055Z"}
+{"decision":"allowed","reason":"Command 'cd' is allowed by policy","tool":"run_command","command":"cd backend && npm run build && npm test && npm run format:check","at":"2026-11-08T17:22:36.277Z"}
+{"decision":"allowed","reason":"Command 'cd' is allowed by policy","tool":"run_command","command":"cd backend && npm run format && cd ../frontend && npm run build && npm run format:check && cd .. && npm run format:check","at":"2026-11-08T17:22:39.799Z"}
+{"decision":"allowed","reason":"Command 'docker' is allowed by policy","tool":"run_command","command":"docker compose up -d --build","at":"2026-11-08T17:22:43.218Z"}
+{"decision":"allowed","reason":"Command 'curl' is allowed by policy","tool":"run_command","command":"curl -sf http://localhost:3000/health","at":"2026-11-08T17:23:34.018Z"}
+{"decision":"allowed","reason":"Tool 'load_skill' is allowed by policy","tool":"load_skill","name":"api-design","at":"2026-11-08T17:23:45.562Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/api.service.ts","at":"2026-11-08T17:24:09.427Z"}
+{"decision":"allowed","reason":"Tool 'read_file' is allowed by policy","tool":"read_file","path":"backend/src/api.service.ts","at":"2026-11-08T17:24:11.373Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/api.service.ts","at":"2026-11-08T17:24:16.304Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/api.service.ts","at":"2026-11-08T17:24:18.589Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/api.service.ts","at":"2026-11-08T17:24:35.992Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":"backend/src/database/migrations/003_append_only.sql","at":"2026-11-08T17:24:45.410Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":"backend/src/database/migrations/003_append_only.down.sql","at":"2026-11-08T17:24:47.608Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/api.service.ts","at":"2026-11-08T17:24:56.973Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/api.service.ts","at":"2026-11-08T17:25:03.402Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/api.service.ts","at":"2026-11-08T17:25:05.831Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/api.service.ts","at":"2026-11-08T17:25:11.341Z"}
+{"decision":"allowed","reason":"Tool 'read_file' is allowed by policy","tool":"read_file","path":"backend/src/api.controller.ts","at":"2026-11-08T17:25:19.857Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/package.json","at":"2026-11-08T17:25:36.647Z"}
+{"decision":"allowed","reason":"Tool 'read_file' is allowed by policy","tool":"read_file","path":"backend/package.json","at":"2026-11-08T17:25:59.605Z"}
+{"decision":"allowed","reason":"Command 'rm' is allowed by policy","tool":"run_command","command":"rm root-package.json","at":"2026-11-08T17:26:15.320Z"}
+{"decision":"allowed","reason":"Tool 'read_file' is allowed by policy","tool":"read_file","path":"backend/src/api.service.ts","at":"2026-11-08T17:26:36.190Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/api.service.ts","at":"2026-11-08T17:26:51.877Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/api.service.ts","at":"2026-11-08T17:26:58.955Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/api.service.ts","at":"2026-11-08T17:27:01.697Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/api.service.ts","at":"2026-11-08T17:27:04.510Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/api.service.ts","at":"2026-11-08T17:27:07.337Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":"backend/src/common/rate-limit.ts","at":"2026-11-08T17:27:13.017Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/api.controller.ts","at":"2026-11-08T17:27:14.924Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/api.controller.ts","at":"2026-11-08T17:27:17.935Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/api.controller.ts","at":"2026-11-08T17:27:39.311Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/api.controller.ts","at":"2026-11-08T17:27:51.018Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/api.controller.ts","at":"2026-11-08T17:27:57.757Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/api.controller.ts","at":"2026-11-08T17:27:59.539Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/api.controller.ts","at":"2026-11-08T17:28:01.193Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/api.controller.ts","at":"2026-11-08T17:28:04.874Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/app.module.ts","at":"2026-11-08T17:28:06.731Z"}
+{"decision":"allowed","reason":"Tool 'read_file' is allowed by policy","tool":"read_file","path":"backend/src/app.module.ts","at":"2026-11-08T17:28:14.999Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/app.module.ts","at":"2026-11-08T17:28:17.732Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/app.module.ts","at":"2026-11-08T17:28:26.855Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/package.json","at":"2026-11-08T17:28:28.782Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":"backend/src/api.service.ts","at":"2026-11-08T17:29:14.495Z"}
+{"decision":"allowed","reason":"Tool 'write_file' is allowed by policy","tool":"write_file","path":"backend/src/api.controller.ts","at":"2026-11-08T17:29:39.074Z"}
+{"decision":"allowed","reason":"Command 'cd' is allowed by policy","tool":"run_command","command":"cd backend && npm install && npm run format && npm run build","at":"2026-11-08T17:30:00.884Z"}
+{"decision":"allowed","reason":"Tool 'read_file' is allowed by policy","tool":"read_file","path":"backend/src/api.service.ts","at":"2026-11-08T17:30:11.089Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/api.service.ts","at":"2026-11-08T17:30:13.700Z"}
+{"decision":"allowed","reason":"Command 'cd' is allowed by policy","tool":"run_command","command":"cd backend && npm run format && npm run build","at":"2026-11-08T17:30:15.688Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/api.controller.ts","at":"2026-11-08T17:30:19.424Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/api.controller.ts","at":"2026-11-08T17:30:22.539Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/package.json","at":"2026-11-08T17:30:31.820Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/common/rate-limit.ts","at":"2026-11-08T17:30:33.926Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/common/rate-limit.ts","at":"2026-11-08T17:30:36.145Z"}
+{"decision":"allowed","reason":"Command 'cd' is allowed by policy","tool":"run_command","command":"cd backend && npm install && npm run format && npm run build","at":"2026-11-08T17:30:38.004Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/main.ts","at":"2026-11-08T17:30:41.487Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/api.controller.ts","at":"2026-11-08T17:30:43.141Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/api.controller.ts","at":"2026-11-08T17:30:45.190Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/api.controller.ts","at":"2026-11-08T17:30:51.041Z"}
+{"decision":"allowed","reason":"Tool 'read_file' is allowed by policy","tool":"read_file","path":"backend/src/api.controller.ts","at":"2026-11-08T17:30:52.616Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/api.controller.ts","at":"2026-11-08T17:30:59.983Z"}
+{"decision":"allowed","reason":"Command 'cd' is allowed by policy","tool":"run_command","command":"cd backend && npm run format && npm run build","at":"2026-11-08T17:31:01.562Z"}
+{"decision":"allowed","reason":"Command 'cd' is allowed by policy","tool":"run_command","command":"cd backend && npm test && npm run format:check && cd ../frontend && npm run build && npm run format:check && cd .. && npm run format:check && docker compose up -d --build","at":"2026-11-08T17:31:09.303Z"}
+{"decision":"allowed","reason":"Command 'curl' is allowed by policy","tool":"run_command","command":"curl -sf http://localhost:3000/health && curl -s -o /dev/null -w '%{http_code}' http://localhost:8080/","at":"2026-11-08T17:31:38.641Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"frontend/src/main.tsx","at":"2026-11-08T17:31:47.235Z"}
+{"decision":"allowed","reason":"Command 'cd' is allowed by policy","tool":"run_command","command":"cd frontend && npm run format && npm run format:check && npm run build && cd .. && cd backend && npm run format && npm run format:check && npm run build && npm test","at":"2026-11-08T17:31:49.451Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/main.ts","at":"2026-11-08T17:32:03.074Z"}
+{"decision":"allowed","reason":"Tool 'read_file' is allowed by policy","tool":"read_file","path":"backend/src/main.ts","at":"2026-11-08T17:32:11.034Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/main.ts","at":"2026-11-08T17:32:33.145Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/main.ts","at":"2026-11-08T17:32:36.274Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/common/errors.filter.ts","at":"2026-11-08T17:32:37.987Z"}
+{"decision":"allowed","reason":"Tool 'read_file' is allowed by policy","tool":"read_file","path":"backend/src/common/errors.filter.ts","at":"2026-11-08T17:32:44.514Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/common/errors.filter.ts","at":"2026-11-08T17:32:46.017Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/common/errors.filter.ts","at":"2026-11-08T17:32:48.626Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/common/errors.filter.ts","at":"2026-11-08T17:32:50.641Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/api.service.ts","at":"2026-11-08T17:32:52.983Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"backend/src/api.controller.ts","at":"2026-11-08T17:32:54.621Z"}
+{"decision":"allowed","reason":"Tool 'read_file' is allowed by policy","tool":"read_file","path":"frontend/src/main.tsx","at":"2026-11-08T17:32:56.820Z"}
+{"decision":"allowed","reason":"Tool 'search_replace' is allowed by policy","tool":"search_replace","path":"frontend/src/main.tsx","at":"2026-11-08T17:33:00.181Z"}
+{"decision":"allowed","reason":"Command 'cd' is allowed by policy","tool":"run_command","command":"cd backend && npm run format && npm run build && npm test && cd ../frontend && npm run format && npm run build && cd .. && npm run format && npm run format:check","at":"2026-11-08T17:33:01.882Z"}
+{"decision":"allowed","reason":"Command 'docker' is allowed by policy","tool":"run_command","command":"docker compose up -d --build && curl -sf http://localhost:3000/health && cd backend && npm run format:check && cd ../frontend && npm run format:check && cd .. && npm run format:check","at":"2026-11-08T17:33:06.106Z"}
+{"decision":"allowed","reason":"Command 'curl' is allowed by policy","tool":"run_command","command":"curl -sf http://localhost:3000/health","at":"2026-11-08T17:33:17.220Z"}
+{"decision":"allowed","reason":"Command 'cd' is allowed by policy","tool":"run_command","command":"cd backend && npm run format:check && npm test && cd ../frontend && npm run build && npm run format:check && cd .. && npm run format:check","at":"2026-11-08T17:33:28.557Z"}
